@@ -96,7 +96,7 @@ hexo使用心得（二）
 hexo你的博客
 
 
-一些踩坑记录1. hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-op">
+一些踩坑记录hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-optio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客搭建成功">
 <meta property="og:url" content="https://xiuquanw.github.io/2017/03/04/myFirstBlog/index.html">
@@ -110,8 +110,8 @@ hexo使用心得（二）
 hexo你的博客
 
 
-一些踩坑记录1. hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-op">
-<meta property="og:updated_time" content="2017-03-05T07:42:20.000Z">
+一些踩坑记录hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-optio">
+<meta property="og:updated_time" content="2017-03-16T03:21:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建成功">
 <meta name="twitter:description" content="花费3个小时，基于hexo搭建的博客终于成功上线了！引用参考攻略，谢谢你们的技术分享：
@@ -123,7 +123,7 @@ hexo使用心得（二）
 hexo你的博客
 
 
-一些踩坑记录1. hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-op">
+一些踩坑记录hexo DTraceProviderBindings MODULE_NOT_FOUND虽然不影响使用但是还是逼死强迫症的节奏啊附解决方案：1$ npm install hexo --no-optio">
 
 
 
@@ -357,9 +357,9 @@ hexo你的博客
 <li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></li>
 </ul>
 </blockquote>
-<h2 id="一些踩坑记录"><a href="#一些踩坑记录" class="headerlink" title="一些踩坑记录"></a>一些踩坑记录</h2><h3 id="1-hexo-DTraceProviderBindings-MODULE-NOT-FOUND"><a href="#1-hexo-DTraceProviderBindings-MODULE-NOT-FOUND" class="headerlink" title="1. hexo DTraceProviderBindings MODULE_NOT_FOUND"></a>1. hexo DTraceProviderBindings MODULE_NOT_FOUND</h3><p>虽然不影响使用但是还是逼死强迫症的节奏啊<br>附解决方案：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo --no-optional</div></pre></td></tr></table></figure></p>
+<h2 id="一些踩坑记录"><a href="#一些踩坑记录" class="headerlink" title="一些踩坑记录"></a>一些踩坑记录</h2><h3 id="hexo-DTraceProviderBindings-MODULE-NOT-FOUND"><a href="#hexo-DTraceProviderBindings-MODULE-NOT-FOUND" class="headerlink" title="hexo DTraceProviderBindings MODULE_NOT_FOUND"></a>hexo DTraceProviderBindings MODULE_NOT_FOUND</h3><p>虽然不影响使用但是还是逼死强迫症的节奏啊<br>附解决方案：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo --no-optional</div></pre></td></tr></table></figure></p>
 <p>或者重装hexo-cli<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm uninstall hexo-cli -g</div><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
-<h3 id="2-git-部署报错"><a href="#2-git-部署报错" class="headerlink" title="2. git 部署报错"></a>2. git 部署报错</h3><p>总是提示push的权限不对，到了一个错误的帐号，隐约记得之前用过一起其他github帐号push过代码，但是已经改了.ssh/config文件 ssh-add 也修改了，还是不起作用,于是乎google了一把<br>终于找到一个相近的问题<br><a href="http://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user" target="_blank" rel="external">http://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user</a></p>
+<h3 id="git-部署报错"><a href="#git-部署报错" class="headerlink" title="git 部署报错"></a>git 部署报错</h3><p>总是提示push的权限不对，到了一个错误的帐号，隐约记得之前用过一起其他github帐号push过代码，但是已经改了.ssh/config文件 ssh-add 也修改了，还是不起作用,于是乎google了一把<br>终于找到一个相近的问题<br><a href="http://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user" target="_blank" rel="external">http://stackoverflow.com/questions/5335197/gits-famous-error-permission-to-git-denied-to-user</a></p>
 <p>问题基本明朗了，mac的钥匙串缓存了github的信息，删除掉即可<br>操作步骤如下：</p>
 <blockquote>
 <ul>
@@ -534,7 +534,7 @@ hexo你的博客
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些踩坑记录"><span class="nav-number">1.</span> <span class="nav-text">一些踩坑记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-hexo-DTraceProviderBindings-MODULE-NOT-FOUND"><span class="nav-number">1.1.</span> <span class="nav-text">1. hexo DTraceProviderBindings MODULE_NOT_FOUND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-git-部署报错"><span class="nav-number">1.2.</span> <span class="nav-text">2. git 部署报错</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些踩坑记录"><span class="nav-number">1.</span> <span class="nav-text">一些踩坑记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-DTraceProviderBindings-MODULE-NOT-FOUND"><span class="nav-number">1.1.</span> <span class="nav-text">hexo DTraceProviderBindings MODULE_NOT_FOUND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-部署报错"><span class="nav-number">1.2.</span> <span class="nav-text">git 部署报错</span></a></li></ol></li></ol></div>
             
 
           </div>
