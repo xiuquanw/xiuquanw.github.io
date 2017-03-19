@@ -250,6 +250,152 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://xiuquanw.github.io/2017/03/19/mac-nginx-install-fileList-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiuquan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiuquan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/19/mac-nginx-install-fileList-config/" itemprop="url">
+                  mac下nginx安装及其目录遍历配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-19T22:50:25+08:00">
+                2017-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>背景：mac开发机，本地搭建nginx服务，对服务端存储的文档做展示。</p>
+</blockquote>
+<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><p>直接通过brew安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install nginx</div></pre></td></tr></table></figure></p>
+<h2 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx</div></pre></td></tr></table></figure>
+<h2 id="停止nginx"><a href="#停止nginx" class="headerlink" title="停止nginx"></a>停止nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -s stop</div></pre></td></tr></table></figure>
+<h2 id="重新加载nginx"><a href="#重新加载nginx" class="headerlink" title="重新加载nginx"></a>重新加载nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -s reload</div></pre></td></tr></table></figure>
+<h2 id="配置文件遍历"><a href="#配置文件遍历" class="headerlink" title="配置文件遍历"></a>配置文件遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vi /usr/local/etc/nginx/nginx.conf</div><div class="line"># server 节点</div><div class="line">location /share &#123;</div><div class="line">            root   /Users/yourusername/dir_needed_share;</div><div class="line">            autoindex on;</div><div class="line">            autoindex_exact_size off;</div><div class="line">            autoindex_localtime on;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>几个关键点：</p>
+<ul>
+<li>/share 和root 配置的目录必须是可达到的路径 <font color="#FF0000"><strong>即/Users/yourusername/dir_needed_share/share 此路径可达，否则访问时会报404</strong></font></li>
+<li>autoindex 为必填选型 默认开启  </li>
+<li>autoindex_exact_size off 则会将文件的大小以合适的单位显示M,G等，否则显示字节数</li>
+</ul>
+<h2 id="一些文件路径"><a href="#一些文件路径" class="headerlink" title="一些文件路径"></a>一些文件路径</h2><p>用brew安装的nginx 一些文件路径不一样需要注意</p>
+<ul>
+<li><p>安装目录</p>
+<pre><code>/usr/local/Cellar/nginx/1.10.3
+</code></pre></li>
+<li><p>配置文件路径</p>
+<pre><code>/usr/local/etc/nginx/nginx.conf
+</code></pre></li>
+<li><p>日志文件路径</p>
+<pre><code>/usr/local/var/log/nginx $ ls -lrt
+total 80
+-rw-r--r--  1 staff  admin  29646  3 19 14:45 access.log
+-rw-r--r--  1 staff  admin   6430  3 19 19:11 error.log
+</code></pre></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://xiuquanw.github.io/2017/03/19/mac-os-ftp-practice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -676,7 +822,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -689,7 +835,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
